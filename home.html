@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Sistema Construvision</title>
+</head>
+<body>
+    <header> <!-- cabeçalho da página -->
+        <img src="Imagens/ConstruVision1.png"> <!-- logo do nosso sistema no cabeçalho-->
+        <div class="botoesCabeçalho">
+            <button type="button" id="projeto" onclick="abrirModal()">Criar Projeto</button>
+            <button type="button" id="sair" onclick="sair()">Sair</button>
+        </div>
+    </header>
+    <main>  <!-- conteúdo principal -->
+        <h1>Buscar Projetos</h1> <!-- título -->
+
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomeCliente">Nome do Cliente</label>
+                        <input type="text" id="nomeCliente" placeholder="Cliente">
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" placeholder="CNPJ">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomeEmpresa">Nome da Empresa</label>
+                        <input type="text" id="nomeEmpresa" placeholder="Empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" disabled selected>Status do Projeto</label>
+                        <select id="status">
+                            <option value="opção" disabled selected>Selecione uma Opção</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluído">Concluído</option>
+                            <option value="Atrasado">Atrasado</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <button type="button" id="buscarProjeto" onclick="buscarProjeto()">Buscar</button>
+            <ul id="results-list"></ul>
+        </div>
+        <table id="Tabela1"> <!-- tabela com ID e inicialmente oculta -->
+            <thead> <!-- cabeçalho da tabela -->
+                <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Status do Projeto</th>
+                    <th scope="col"></th> 
+                </tr>
+            </thead>
+            <tbody> <!-- corpo da tabela com dados necessários -->
+                <tr>
+                    <td>Matheus Alves Silva</td>
+                    <td>12.893.781/0904-22</td>
+                    <td>Barbearia Losers</td>
+                    <td>Em Andamento</td>   
+                    <td><a href="barbearia.html"><img src="Imagens/ver.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Haruki Sato Ito</td>
+                    <td>45.724.097/4900-98</td>
+                    <td>TAKESHI Temakeria & Sushi Bar</td>
+                    <td>Concluído</td>
+                    <td><a href="takeshi.html"><img src="Imagens/ver.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Wendy Casilla Duque</td>
+                    <td>24.533.847/7267-61</td>
+                    <td>Duque Sorvetes</td>
+                    <td>Em Andamento</td>
+                    <td><a href="sorveteria.html"><img  src="Imagens/ver.png"></a></td>
+                </tr>
+                <tr>
+                    <td>Marcelo Andrade Morim</td>
+                    <td>20.232.823/0000-06</td>
+                    <td>Odonto Prime</td>
+                    <td>Atrasado</td>
+                    <td><a href="odontologia.html"><img  src="Imagens/ver.png"></a></td>
+                </tr>
+            </tbody>
+            <tfoot>  <!-- rodapé da tabela com informações adicionais -->
+                <tr>
+                    <th scope="row">Número de Projetos:</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>4</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="novoProjeto" id="novoProjeto">
+            <div class="modalProjeto">
+                <button class="fechar" id="fechar" onclick="fecharModal()">X</button>
+                <h1>Registro de Novo Projeto</h1>
+                <form>
+                    <label for="nome_Cliente">Nome do Cliente</label>
+                    <input type="text" id="nome_Cliente" placeholder="Cliente">
+                </form>
+                <form>
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj_" placeholder="CNPJ">
+                </form>
+                <form>
+                    <label for="nome_Empresa">Nome da Empresa</label>
+                    <input type="text" id="nome_Empresa" placeholder="Empresa">
+                </form>
+                <label for="status_" disabled selected>Status do Projeto</label>
+                <select id="status_">
+                    <option value="opção" disabled selected>Selecione uma Opção</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluído">Concluído</option>
+                    <option value="Atrasado">Atrasado</option>
+                </select>
+                <h1 id="posicao">
+                    <button type="button" id="salvarNovoProjeto" onclick="salvarProjeto()">Salvar</button>
+                </h1>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script> 
+</body>
+</html>

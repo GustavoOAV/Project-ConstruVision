@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/takeshi.css">
+    <title>Sistema Construvision</title>
+</head>
+<body>
+    <div class="container">
+        <a class="voltar" href="home.html">Voltar</a>
+        <img src="Imagens/Takeshi.jpg" alt="Sua Imagem">
+        <div class="conteudo">
+            <h3>Empresa: TAKESHI Temakeria & Sushi Bar</h3>
+            <p>Endereço: Calçada das Orquídeas, 209 - Alphaville, Barueri - SP, 06453-001</p>
+            <p>Email: harukisato.gmail.com</p>
+            <p>Telefone: +55 11 46881244</p>
+        </div>
+    </div>
+    
+    <div class="botoesTakeshi">
+        <a class="botaocrono" onclick="cronograma()">Cronograma</a>
+        <a class="botaorecur" onclick="recursos()">Recursos</a>
+        <a class="botaoorcamento" onclick="orcamento()">Orçamento</a>
+        <a class="botaoprojF" onclick="foto()">Projeto Final</a>
+        </div>
+        <img id="imagemBarbearia" src="Imagens/barbearia.jpg" style="display:none;">
+
+        <div id="tabelaCronograma" style="display:none;">
+            <h2>Tabela de Cronograma</h2>
+            <table id="tabelaCrono">
+                <thead>
+                    <tr>
+                        <th>Semana</th>
+                        <th>Objetivo</th>
+                        <th>Status</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+            <br>
+            <div id="inputsContainer">
+                <div class="inputWrapper">
+                    <label for="semana">Semana:</label>
+                    <input type="text" id="semana">
+                </div>
+                <div class="inputWrapper">
+                    <label for="objetivo">Objetivo:</label>
+                    <input type="text" id="objetivo">
+                </div>
+                <div class="inputWrapper">
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="status" disabled selected>Selecione uma Opção</option>
+                        <option value="Em andamento">Em Andamento</option>
+                        <option value="Concluído">Concluído</option>
+                        <option value="Atrasado">Atrasado</option>
+                    </select>
+                </div>
+            </div>
+            <button id="adicionarCrono" onclick="adicionarCronograma()">Adicionar</button>
+        </div>
+      <!--  -->
+        <div id="tabelaContainer2" style="display:none;">
+            <h2>Tabela de Recursos</h2>
+            <table id="tabela2">
+                <thead>
+                    <tr>
+                        <th>Objeto</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+            <br>
+            <div id="inputsContainer">
+                <div class="inputWrapper">
+                    <label for="objeto">Objeto:</label>
+                    <input type="text" id="objeto">
+                </div>
+                <div class="inputWrapper">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" min="0">
+                </div>
+                <div class="inputWrapper">
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor" pattern="[0-9]+([,\.][0-9]+)?" min="0">
+                </div>
+            </div>
+            <button id="adicionarRecursos" onclick="adicionarRecursos()">Adicionar</button>
+        </div>
+        
+        <!--  -->
+    
+        <div id="tabelaContainer3" style="display:none;">
+            <h2>Tabela de Orçamento</h2>
+            <table id="tabela3">
+                <thead>
+                    <tr>
+                        <th>Material de Costrução</th>
+                        <th>Mão de Obra</th>
+                        <th>Equipamentos</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+            <br>
+            <div id="inputsContainer">
+                <div class="inputWrapper">
+                    <label for="MateriaisDeConstrucao">Materiais:</label>
+                    <input type="text" id="MateriaisDeConstrucao">
+                </div>
+                <div class="inputWrapper">
+                    <label for="MaoDeObra">Mão de Obra:</label>
+                    <input type="text" id="MaoDeObra">
+                </div>
+                <div class="inputWrapper">
+                        <label for="equipamentos">Equipamentos:</label>
+                        <input type="text" id="equipamentos">
+            </div>
+        </div>
+            <button id="adicionarOrcamento" onclick="adicionarOrcamento()">Adicionar</button>
+        </div>
+       
+        <div id="fotoContainer" style="display: none; padding: 20px; text-align: center;">
+            <h2>Arquitetura</h2>
+            <img src="Imagens/takeshi1.jpg" alt="Descrição da Imagem"  style="max-width: 60%; height: auto;">
+            <img src="Imagens/takeshi2.jpg" alt="Descrição da Imagem"  style="max-width: 60%; height: auto;">
+            <img src="Imagens/takeshi3.jpg" alt="Descrição da Imagem"  style="max-width: 60%; height: auto;">
+          </div>
+    
+        <script src="js/TakeshiBotoes.js"></script> <!-- link para o arquivo JavaScript externo -->
+    </body>
+    </html>

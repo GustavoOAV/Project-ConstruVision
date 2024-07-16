@@ -1,0 +1,283 @@
+/* Define estilos padrão para todos os elementos */
+* {
+    margin: 0; /* remove as margens */
+    padding: 0; /* remove os preenchimentos */
+    box-sizing: border-box; /* define a caixa do modelo de caixa para incluir margens e preenchimentos do elemento. */
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: rgb(221, 221, 235); /* fundo cinza claro */
+}
+
+/* estilo do cabeçalho da página */
+header {
+    display: flex; /* define um layout flexível para organizar elementos filhos. */
+    justify-content: space-between; /* alinha os elementos horizontalmente com espaço entre eles. */
+    align-items: center; /* alinha os alimentos ao centro */
+    padding: 10px; /* preenchimento interno */
+    background-color: #000033; /* define a cor do cabeçalho */
+}
+
+/* estilo do conteúdo principal */
+main {
+    width: 98%; /* largura */
+    height: 500px; /* altura */
+    max-width: 1300px; /* largura máxima */
+    margin: 0 auto; /* centraliza o conteúdo  */
+    padding: 10px; /* preenchumento */
+    background-color: rgb(221, 221, 235); /* define a cor de fundo */
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 25px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus {
+    border: 2px solid rgb(103, 177, 224);
+    outline: none;
+}
+
+select:focus {
+    border: 2px solid rgb(103, 177, 224);
+    outline: none;
+}
+
+/* estilo do rodapé da página */
+footer {
+    width: 98%; /* largura do contêiner pai */
+    padding: 10px; /* preenchimento */
+    text-align: center; /* centraliza o texto */
+    background-color: rgb(221, 221, 235);
+}
+
+/* estilo de todas as imagens na página */
+img {
+    width: 120px; /* define uma largura máxima de 120 pixels para as imagens.*/
+    height: auto; /* proporção original da imagem */
+}
+
+#projeto,
+#sair {
+    background-color: rgb(163, 161, 161);
+    color: white; /* cor do texto */
+    border: none; /* remove a borda */
+    padding: 10px 15px; /* especifica o preenchimento de 5 pixels no topo e inferior e 15 pixels nos lados do elemento.*/
+    text-align: center; /* centraliza o texto */
+    text-decoration: none; /* remove a decoração de texto, como sublinhado. */
+    display: inline-block; /*  torna o elemento um bloco inline. */
+    font-size: 16px; /*  define o tamanho da fonte como 16 pixels. */
+    margin: 10px 0; /* margem superior e inferior */
+    cursor: pointer; /* muda o cursor do mouse para um ponteiro. */
+    border-radius: 5px; /* cantos arredondados */
+    margin-left: auto; /* centraliza o elemento horizontalmente na página. */
+    margin-right: 10px; /* separação dos botões */
+}
+
+#projeto:hover,
+#sair:hover {
+    background-color: rgb(9, 115, 228); /* define a cor de fundo do elemento quando o mouse passa sobre ele. */
+}
+
+#buscarProjeto {
+    background-color: rgb(163, 161, 161);
+    color: white; /* cor do texto */
+    border: none; /* remove a borda */
+    padding: 5px 15px; /* especifica o preenchimento de 5 pixels no topo e inferior e 15 pixels nos lados do elemento.*/
+    text-align: center; /* centraliza o texto */
+    text-decoration: none; /* remove a decoração de texto, como sublinhado. */
+    display: inline-block; /*  torna o elemento um bloco inline. */
+    font-size: 16px; /*  define o tamanho da fonte como 16 pixels. */
+    margin: 10px 0; /* margem superior e inferior */
+    cursor: pointer; /* muda o cursor do mouse para um ponteiro. */
+    border-radius: 5px; /* cantos arredondados */
+}
+
+#buscarProjeto:hover {
+    background-color: rgb(0, 123, 255); /* define a cor de fundo do elemento quando o mouse passa sobre ele. */
+}
+
+/* estilo do botão com o ID "BuscarTabela" */
+#BuscarTabela {
+    background-color: rgb(163, 161, 161);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* efeito hover para o botão "BuscarTabela" */
+#BuscarTabela:hover {
+    background-color: rgb(0, 123, 255);
+}
+
+/* estilo da tabela com o ID "Tabela1" */
+#Tabela1 {
+    font-family: 'Times New Roman', Times, serif; /* fonte do texto na tabela */
+    width: 90%; /* largura da tabela */
+    border-collapse: collapse; /* bordas da tabela comporta de forma que pareçam mescladas. */
+    margin-left: auto; /* centraliza a tabela horizontalmente */
+    margin-right: auto; /* centraliza a tabela horizontalmente */
+    table-layout: auto;
+}
+
+/* estilo das células da tabela */
+td,
+th {
+    border: 1px solid rgb(0, 0, 0); /*  borda sólida de 1 pixel com a cor preta para todas as células e cabeçalho. */
+    padding: 5px; /* preenchimento das células */
+    text-align: center; /* centraliza o texto */
+}
+
+/* estilo do cabeçalho e rodapé da tabela */
+thead,
+tfoot {
+    background-color: #000033ef; /* fundo azul escuro com transparência */
+    color: rgb(252, 252, 252); /* cor do texto  */
+    text-align: center; /* centralizar etxto */
+}
+
+/* estilo das linhas pares no corpo da tabela */
+tbody tr:nth-child(even) {
+    background-color: rgb(240, 236, 236); /* fundo cinza claro para linhas pares */
+}
+
+table td img {
+    width: 22px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff; /* Cor de fundo da caixa de seleção */
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.novoProjeto {
+    width: 100vw;
+    height: 100vh; /* Corrija a unidade para vh para cobrir a altura da tela */
+    position: fixed; /* Use position: fixed para manter o modal fixo na tela */
+    top: 0;
+    left: 0;
+    background-color: rgba(31, 31, 31, 0.788);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Aumente o valor do z-index para garantir que o modal esteja na frente */
+}
+
+.modalProjeto {
+    width: 40%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #ffffff95;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    position: relative; /* Adicione esta linha para posicionar o modal em relação ao pai (.novoProjeto) */
+    z-index: 1000; /* Aumente o valor do z-index para garantir que o modal esteja na frente */
+}
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #000033ef;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.abrir .modalProjeto {
+    animation: abrirModal;
+}
+
+@keyframes abrirModal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#salvarNovoProjeto {
+    background-color: rgb(163, 161, 161);
+    color: white; /* cor do texto */
+    border: none; /* remove a borda */
+    padding: 10px 15px; /* especifica o preenchimento de 5 pixels no topo e inferior e 15 pixels nos lados do elemento.*/
+    text-align: center; /* centraliza o texto */
+    text-decoration: none; /* remove a decoração de texto, como sublinhado. */
+    font-size: 16px; /*  define o tamanho da fonte como 16 pixels. */
+    margin: 10px 0; /* margem superior e inferior */
+    cursor: pointer; /* muda o cursor do mouse para um ponteiro. */
+    border-radius: 5px; /* cantos arredondados */
+}
+
+#salvarNovoProjeto:hover {
+    background-color: rgb(0, 123, 255);
+}
+
+#posicao {
+    margin-right: 200px;
+}

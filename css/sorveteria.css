@@ -1,0 +1,145 @@
+body {
+    background-color:  rgb(221, 221, 235); /* Cor de fundo da página */
+    text-align: center;
+}
+
+.container {
+    background-color: #000033ef;
+    color:rgb(255, 255, 255);
+    width: 97%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: right;
+}
+
+.container img {
+    width: 100%;
+    max-width: 180px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.conteudo {
+    text-align: justify;
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+    flex-wrap: wrap;
+    
+}
+
+.botoesSorveteria {
+    text-align: center;
+}
+
+.botoesSorveteria a {
+    background-color: #000033ef;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    padding: 20px 90px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.botoes a:hover {
+    background-color: #02025f;
+}
+
+.voltar {
+    background-color: #33a7ff; 
+    color: white; /* cor do texto */
+    border: none; /* remove a borda */
+    height: 20px;
+    align-items: center;
+    padding: 5px 15px; /* especifica o preenchimento de 5 pixels no topo e inferior e 15 pixels nos lados do elemento.*/
+    text-align: center;  /* centraliza o texto */
+    text-decoration: none; /* remove a decoração de texto, como sublinhado. */
+    font-size: 16px; /*  define o tamanho da fonte como 16 pixels. */ 
+    margin: 10px 0; /* margem superior e inferior */
+    cursor: pointer; /* muda o cursor do mouse para um ponteiro. */
+    border-radius: 5px; /* cantos arredondados */
+    margin-left: 500px; /* centraliza o elemento horizontalmente na página. */
+    position: absolute;
+    top: 10px; /* Posição vertical desejada */
+    right: 10px; /* Posição horizontal desejada */
+}
+
+/* efeito hover para o botão "sair-1" */
+.voltar:hover {
+    background-color: rgb(0, 123, 255); /* define a cor de fundo do elemento quando o mouse passa sobre ele. */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    width: 20%;
+    }
+    
+    th {
+    background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f9f9f9; /* Cor para as linhas pares */
+    }
+    
+    .inputWrapper {
+        display: inline-block;
+        margin-right: 10px; /* Espaçamento entre os inputs */
+    }
+
+    #semana,
+    #objetivo,
+    #status {
+        width: 300px; /* Ajuste o valor conforme necessário */
+        box-sizing: border-box; /* Inclui a largura do preenchimento e da borda no tamanho total */
+        margin-bottom: 10px; /* Adicione espaço abaixo dos inputs */
+    }
+
+    #objeto,
+    #quantidade,
+    #valor {
+        width: 300px; /* Ajuste o valor conforme necessário */
+        box-sizing: border-box; /* Inclui a largura do preenchimento e da borda no tamanho total */
+        margin-bottom: 10px; /* Adicione espaço abaixo dos inputs */
+    }
+
+    #MateriaisDeConstrucao,
+    #MaoDeObra,
+    #equipamentos {
+        width: 300px; /* Ajuste o valor conforme necessário */
+        box-sizing: border-box; /* Inclui a largura do preenchimento e da borda no tamanho total */
+        margin-bottom: 10px; /* Adicione espaço abaixo dos inputs */
+    }
+
+    #adicionarCrono, #adicionarRecursos, #adicionarOrcamento {
+        background-color:  #f2f2f2;
+        border: none; /* remove a borda */
+        padding: 5px 10px; 
+        text-align: center;  /* centraliza o texto */
+        text-decoration: none; /* remove a decoração de texto, como sublinhado. */
+        font-size: 14px; /*  define o tamanho da fonte como 16 pixels. */ 
+        margin: 10px 0; /* margem superior e inferior */
+        cursor: pointer; /* muda o cursor do mouse para um ponteiro. */
+        border-radius: 5px; /* cantos arredondados */
+    }
+    
+    #adicionarCrono:hover, #adicionarRecursos:hover, #adicionarOrcamento:hover {
+        background-color:  #c7c7c7;
+    }
+
+  

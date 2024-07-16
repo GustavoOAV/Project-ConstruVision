@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ConstruVision</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="backback"></div>
+
+        <div>
+            <img id="logo" src="imagens/ConstruVision1.png" alt="" width="220px" height="130px">
+            <br>
+
+            <p>Email:</p>
+            <input id="userInput" type="text" placeholder="User">
+            <br>
+            <p>Senha:</p>
+            <input id="passwordInput" type="password" placeholder="Password">
+            <br><br>
+
+            <button id="BEntrar" value="Clique" onclick="solicitarNome()">Entrar</button>
+
+            <h2><button id="BSenha" value="Click" onclick="Rsenha()">Esqueci a Senha</button></h2>
+            <h2><button id="BCria" value="Clique" onclick="criarConta()">Criar Conta</button></h2>
+
+            <script>
+                function solicitarNome() {
+                    var email = document.getElementById('userInput').value;
+                    var password = document.getElementById('passwordInput').value;
+            
+                    var storedEmail = localStorage.getItem('currentUserEmail');
+                    var storedPassword = localStorage.getItem('currentPassword');
+            
+                    if (email === storedEmail && password === storedPassword) {
+                        alert('Login aceito!');
+                        window.location.href = "home.html";
+                    } else {
+                        alert('Email ou senha incorretos, ou conta não existe. Por favor, crie uma conta.');
+                    }
+                }
+            
+                function Rsenha() {
+                    // Solicita ao usuário o email associado à conta para redefinir a senha
+                    var emailToReset = window.prompt('Digite o email associado à conta para redefinir a senha:');
+            
+                    // Obtém o email armazenado no localStorage
+                    var storedEmail = localStorage.getItem('currentUserEmail');
+            
+                    // Verifica se o email fornecido corresponde ao armazenado
+                    if (emailToReset === storedEmail) {
+                        var rsenha = window.prompt('Digite uma nova senha');
+                        if (rsenha !== null) {
+                            alert('Senha resetada com sucesso!');
+                            localStorage.setItem('currentPassword', rsenha);
+                        }
+                    } else {
+                        alert('Email não encontrado. Por favor, forneça o email associado à sua conta.');
+                    }
+                }
+            
+                function criarConta() {
+                    var nome = window.prompt('Digite seu nome:');
+                    var email = window.prompt('Digite seu email:');
+                    var telefone = window.prompt('Digite seu telefone:');
+                    var senha = window.prompt('Digite uma senha:');
+            
+                    if (nome !== null && email !== null && telefone !== null && senha !== null) {
+                        alert('Conta criada com sucesso para ' + nome);
+                        localStorage.setItem('currentUser', nome);
+                        localStorage.setItem('currentUserEmail', email);
+                        localStorage.setItem('currentUserTelefone', telefone);
+                        localStorage.setItem('currentPassword', senha);
+                    }
+                }
+            </script>
+            
+            
+            
+
+        </div>
+    </header>
+</body>
+
+</html>

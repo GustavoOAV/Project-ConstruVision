@@ -1,0 +1,104 @@
+/* Estilo para a classe "backback" */
+.backback {
+    background-image: url(Imagens/fundo.jpg); /* Define uma imagem de fundo */
+    background-size: 100%; /* Define o tamanho da imagem de fundo como 100% */
+    filter: blur(5px); /* Aplica um efeito de desfoque à imagem */
+    z-index: -1; /* Define a camada de z-index para ficar atrás dos outros elementos */
+    position: fixed; /* Define a posição como fixa para cobrir toda a tela */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+}
+
+/* Estilo para todos os elementos div */
+div {
+    background-color: rgba(9, 9, 48, 0.628); /* Define uma cor de fundo com transparência */
+    position: absolute; /* Define a posição como absoluta para posicionamento personalizado */
+    top: 50%; /* Move o elemento para 50% da altura do elemento pai */
+    left: 50%; /* Move o elemento para 50% da largura do elemento pai */
+    transform: translate(-50%, -50%); /* Centraliza o elemento no meio do elemento pai */
+    padding: 50px; /* Adiciona espaço interno */
+    border-radius: 20px; /* Adiciona cantos arredondados */
+    color: white; /* Define a cor do texto como branco */
+    width: 450px; /* Define a largura fixa */
+    height: 430px; /* Define a altura fixa */
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px; /* espaço entre a mensagem e a caixa de texto */
+
+}
+
+/* Estilo para todos os elementos input */
+input {
+    padding: 15px; /* Adiciona espaço interno */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    outline: none; /* Remove o contorno do elemento quando em foco */
+    font-size: 15px; /* Define o tamanho da fonte */
+    width: 93%; /* Define a largura como 93% para ocupar a maior parte do contêiner */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(200, 200, 209);
+}
+
+/* Estilo para o elemento com a ID "BEntrar" */
+#BEntrar {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 17px; /* Adiciona espaço interno */
+    width: 100%; /* Define a largura como 100% para ocupar todo o contêiner */
+    font-size: 14px; /* tamanho da fonte  */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    color: black; /* Define a cor do texto como preto */
+    background-color: rgb(200, 200, 209);
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+/* Estilo de hover para o elemento com a ID "BEntrar" */
+#BEntrar:hover {
+    background-color: rgb(183, 184, 186); /* Muda a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para o elemento com a ID "BCria" */
+#BCria {
+    color:rgb(48, 198, 198, 0.8); /* Define a cor do texto com transparência */
+    background-color: Transparent; /* Define a cor de fundo como transparente */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Define um cursor de ponteiro ao passar o mouse */
+    overflow: hidden; /* Oculta qualquer conteúdo que possa estourar o elemento */
+}
+
+/* Estilo de hover para o elemento com a ID "BCria" */
+#BCria:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o texto */
+}
+
+/* Estilo para o elemento h2 */
+h2 {
+    float: right; /* Alinha o elemento à direita do contêiner */
+    margin-left: 10px; /* Adiciona margem à esquerda */
+    margin-top: 5px; /* Adiciona margem superior */
+}
+
+/* Estilo para o elemento com a ID "BSenha" */
+#BSenha {
+    color: rgb(48, 198, 198, 0.8); /* Define a cor do texto com transparência */
+    background-color: Transparent; /* Define a cor de fundo como transparente */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Define um cursor de ponteiro ao passar o mouse */
+    overflow: hidden; /* Oculta qualquer conteúdo que possa estourar o elemento */
+}
+
+/* Estilo de hover para o elemento com a ID "BSenha" */
+#BSenha:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o texto */
+}
+
+/* Estilo para a imagem com a ID "logo" */
+#logo {
+    width: 60%; /* Define a largura da imagem como 60% */
+    margin: auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Define como bloco para ajustar o espaço ao redor */
+}
+

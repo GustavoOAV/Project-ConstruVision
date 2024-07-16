@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/odontologia.css">
+    <title>Sistema Construvision</title>
+</head>
+<body>
+    <div class="container">
+        <a button class="voltar" href="home.html">Voltar</a>
+        <img src="Imagens/odontologia.jpg" alt="Sua Imagem">
+        <div class="conteudo">
+            <h2>Empresa: OdontoPrime</h2>
+            <p>Endereço: R. Bernardino de Campos, 318 - Campo Belo, São Paulo - SP, 04620-001</p>
+            <p>Email: marcelomorim.gmail.com</p>
+            <p>Telefone: (11) 92515-8833</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="botoesOdonto">
+    <a class="botao-crono" onclick="mostrarTabela()">Cronograma</a>
+    <a class="botao-recur" onclick="mostrarTabela2()">Recursos</a>
+    <a class="botao-orcamento" onclick="mostrarTabela3()">Orçamento</a>
+    <a class="botao-projF" onclick="foto()">Projeto Final</a>
+    </div>
+    <div id="tabelaContainer" style="display:none;">
+        <h2>Tabela de Cronograma</h2>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Semana</th>
+                    <th>Objetivo</th>
+                    <th>Status</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
+        <br>
+        <div id="inputsContainer">
+            <div class="inputWrapper">
+                <label for="semana">Semana:</label>
+                <input type="text" id="semana">
+            </div>
+            <div class="inputWrapper">
+                <label for="objetivo">Objetivo:</label>
+                <input type="text" id="objetivo">
+            </div>
+            <div class="inputWrapper">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="status" disabled selected>Selecione uma Opção</option>
+                    <option value="Em andamento">Em Andamento</option>
+                    <option value="Concluído">Concluído</option>
+                    <option value="Atrasado">Atrasado</option>
+                </select>
+            </div>
+        </div>
+        <button id="adicionarCrono" onclick="adicionarLinha()">Adicionar</button>
+    </div>
+  <!--  -->
+    <div id="tabelaContainer2" style="display:none;">
+        <h2>Tabela de Recursos</h2>
+        <table id="tabela2">
+            <thead>
+                <tr>
+                    <th>Objeto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
+        <br>
+        <div id="inputsContainer">
+            <div class="inputWrapper">
+                <label for="objeto">Objeto:</label>
+                <input type="text" id="objeto">
+            </div>
+            <div class="inputWrapper">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" min="0">
+            </div>
+            <div class="inputWrapper">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" pattern="[0-9]+([,\.][0-9]+)?" min="0">
+            </div>
+        </div>
+        <button id="adicionarRecursos" onclick="adicionarLinha2()">Adicionar</button>
+    </div>
+    
+    <!--  -->
+
+    <div id="tabelaContainer3" style="display:none;">
+        <h2>Tabela de Orçamento</h2>
+        <table id="tabela3">
+            <thead>
+                <tr>
+                    <th>Material de Costrução</th>
+                    <th>Mão de Obra</th>
+                    <th>Equipamentos</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados da tabela serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
+        <br>
+        <div id="inputsContainer">
+            <div class="inputWrapper">
+                <label for="MateriaisDeConstrucao">Materiais:</label>
+                <input type="text" id="MateriaisDeConstrucao">
+            </div>
+            <div class="inputWrapper">
+                <label for="MaoDeObra">Mão de Obra:</label>
+                <input type="text" id="MaoDeObra">
+            </div>
+            <div class="inputWrapper">
+                    <label for="equipamentos">Equipamentos:</label>
+                    <input type="text" id="equipamentos">
+        </div>
+    </div>
+        <button id="adicionarOrcamento" onclick="adicionarLinha3()">Adicionar</button>
+    </div>
+   
+    <div id="fotoOdonto" style="display: none; padding: 20px; text-align: center;">
+        <h2>Arquitetura</h2>
+        <img src="Imagens/ProjetoOdonto.jpg" alt="Descrição da Imagem"  style="max-width: 90%; height: auto;">
+      </div>
+
+    <script src="js/OdontoPrime.js"></script> <!-- link para o arquivo JavaScript externo -->
+</body>
+</html>
+
